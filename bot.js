@@ -37,7 +37,8 @@ class DentaBot extends ActivityHandler {
             //  return;
             // }
             // else {...}
-             
+            const replyText = `Echo: ${ context.activity.text }`;
+            await context.sendActivity(MessageFactory.text(replyText, replyText));
             await next();
     });
 
